@@ -3,9 +3,9 @@ public class Vehicle {
 	private String model;
 	private String marca;
 	private String categoria;
-	public static int basic;
-	public static int medium;
-	public static int deluxe;
+	public static int BASIC;
+	public static int MEDIUM;
+	public static int DELUXE;
 	
 	public Vehicle(String model, String marca, String categoria) {
 		this.model = model;

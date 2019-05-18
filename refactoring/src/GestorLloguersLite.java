@@ -16,8 +16,8 @@ public class GestorLloguersLite {
 		// formatat d'una data
 		System.out.println(dateFormat.format(lloguerBasic.getData()));
 		
-		public static String mostrar(Client c1) {
-			return System.out.println("Client: " + client.c1 + "Lloguers: ");
+		public static String mostrar(Client c1, Lloguer) {
+			return System.out.println("Client: " + client.c1 + "Lloguers: " + Lloguer);
 		}
 
 	}
