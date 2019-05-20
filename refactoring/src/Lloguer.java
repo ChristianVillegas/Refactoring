@@ -1,17 +1,22 @@
+import java.util.Date;
 
 public class Lloguer {
-	private int data;
+	private Date data;
 	private int dies;
+	private Vehicle vehicle;
 	
-	public Lloguer(int data, int dies) {
+	public Lloguer(Date data, int dies, Vehicle vehicle) {
 		this.data = data;
 		this.dies = dies;
+		this.vehicle = vehicle;
 	}
 	
-	public int getData()		{ return data;	}
+	public Date getData()		{ return data;	}
 	public int getDies()		{ return dies;  }
+	public Vehicle getVehicle()		{ return vehicle; }
 	
-	public void setData(int data) { this.data = data; }
+	public void setData(Date data) { this.data = data; }
 	public void setDies(int dies) { this.dies = dies; }
+	public void setVehiche(Vehicle vehicle) { this.vehicle = vehicle; }
 
 }

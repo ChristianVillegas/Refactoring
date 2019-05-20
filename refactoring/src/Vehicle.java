@@ -2,12 +2,12 @@
 public class Vehicle {
 	private String model;
 	private String marca;
-	private String categoria;
-	public static int BASIC;
-	public static int MEDIUM;
-	public static int DELUXE;
+	private int categoria;
+	public static final int BASIC = 0;
+	public static final int GENERAL = 1;
+	public static final int LUXE = 2;
 	
-	public Vehicle(String model, String marca, String categoria) {
+	public Vehicle(String model, String marca, int categoria) {
 		this.model = model;
 		this.marca = marca;
 		this.categoria = categoria;
@@ -15,9 +15,9 @@ public class Vehicle {
 	
 	public String getModel()		{ return model; }
 	public String getMarca()		{ return marca; }
-	public String getCategoria()	{ return categoria; }
+	public int getCategoria()	{ return categoria; }
 	
 	public void setModel(String model) { this.model = model; }
 	public void setMarca(String marca) { this.marca = marca; }
-	public void setCategoria(String categoria) { this.categoria = categoria; }
+	public void setCategoria(int categoria) { this.categoria = categoria; }
 }
