@@ -37,6 +37,15 @@ public class Client {
         return lloguers.contains(lloguer);
     }
     
+    public int bonificacionsDeLloguer(Lloguer lloguer) {
+    	int bonificacions = 1;
+    	if (lloguer.getVehicle().getCategoria() == Vehicle.LUXE &&
+                lloguer.getDies()>1 ) {
+            bonificacions ++;
+        }
+		return bonificacions;
+	}
+    
     public String informe() {
     	  double total = 0;
     	    int bonificacions = 0;
@@ -47,14 +56,8 @@ public class Client {
     	        double quantitat = lloguer.quantitat();
 
     	        // afegeix lloguers freqüents
-    	        bonificacions ++;
-
-    	        // afegeix bonificació per dos dies de lloguer de Luxe
-    	        if (lloguer.getVehicle().getCategoria() == Vehicle.LUXE &&
-    	                lloguer.getDies()>1 ) {
-    	            bonificacions ++;
-    	        }
-
+    	        bonificacions += bonificacionsDeLloguer(lloguer);
+    	        
     	        // composa els resultats d'aquest lloguer
     	        resultat += "\t" +
     	            lloguer.getVehicle().getMarca() +
