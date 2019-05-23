@@ -26,28 +26,28 @@ public class Lloguer {
 	public void setDies(int dies) { this.dies = dies; }
 	public void setVehiche(Vehicle vehicle) { this.vehicle = vehicle; }
 
-	 public double quantitat() {
-		 //Amb aquest mètode no agafa el paràmetre lloguer perqué ja ens trobem a la classe 'Lloguer' i només ha d'agafar els seus atributs
-	    	double quantitat = 0;
+	 public double cost() {
+		 //Com que aquest mètode calcula el cost del lloguer del vehicle, he cambiat la variable quantitat per cost (que crec que és més representatiu)
+	    	double cost = 0;
 	    	
 	    	switch (vehicle.getCategoria()) {
 	        case Vehicle.BASIC:
-	            quantitat += UNITAT_DE_COST_BASIC;
+	            cost += UNITAT_DE_COST_BASIC;
 	            if (dies > PREU_DIES_INICIAL_BASIC) {
-	                quantitat += (dies - PREU_DIES_INICIAL_BASIC) * INCREMENT_BASIC;
+	                cost += (dies - PREU_DIES_INICIAL_BASIC) * INCREMENT_BASIC;
 	            }
 	            break;
 	        case Vehicle.GENERAL:
-	            quantitat += UNITAT_DE_COST_GENERAL;
+	            cost += UNITAT_DE_COST_GENERAL;
 	            if (dies > PREU_DIES_INICIAL_GENERAL) {
-	                quantitat += (dies - PREU_DIES_INICIAL_GENERAL) * INCREMENT_GENERAL;
+	                cost += (dies - PREU_DIES_INICIAL_GENERAL) * INCREMENT_GENERAL;
 	            }
 	            break;
 	        case Vehicle.LUXE:
-	            quantitat += dies * UNITAT_DE_COST_LUXE;
+	            cost += dies * UNITAT_DE_COST_LUXE;
 	            break;  
 	    	}
-	    	return quantitat;
+	    	return cost;
 	    }
 	 
 	 public int bonificacions() {
