@@ -5,6 +5,7 @@ public class Client {
     private String nom;
     private String telefon;
     private Vector<Lloguer> lloguers;
+    private static final double EUROS_PER_UNITAT_DE_COST = 30;
 
     public Client(String nif, String nom, String telefon) {
         this.nif = nif;
@@ -46,7 +47,7 @@ public class Client {
     public double importTotal() {
     	double total = 0;
     	for (Lloguer lloguer: lloguers) {
-    		total += lloguer.quantitat() * 30;
+    		total += lloguer.quantitat() * EUROS_PER_UNITAT_DE_COST;
     	}
     	return total;
     }
@@ -73,7 +74,7 @@ public class Client {
 	            lloguer.getVehicle().getMarca() +
 	            " " +
 	            lloguer.getVehicle().getModel() + ": " +
-	            (lloguer.quantitat() * 30) + "€" + "\n";
+	            (lloguer.quantitat() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
 	    }
     	return resultat;
     }
