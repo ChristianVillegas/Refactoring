@@ -2,6 +2,8 @@ Refactoring project:
 
 Aquest projecte conté tots els exercicis proposats al tema 'Refactoring' de l'assignatura M5: Entorns de programació.
 
+Per trobar els continguts abans hauràs d'entrar dins la carpeta 'refactoring'. Dins estan creades les carpetes 'src' i 'doc'.
+
 Dins la carpeta 'src' es troben els arxius '.java' amb els codis i tots els 'commits' que s'han anat afegint a partir de les modificacions requerides.
 
 Dins la carpeta 'doc' trobem els arxius de text corresponents a l'exercici teòric 1 i les dues imatges corresponents als UML demanats.
