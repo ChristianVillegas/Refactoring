@@ -1,0 +1,75 @@
+Exercici 1: El meu exemple
+===========================
+
+Donat la meva escassa experiència com a desenvolupador, posaré com a exemple un dels projectes que vaig presentar com a part de la nota de la UF2 de l’assignatura de M3-Programació:
+Enunciat de la pràctica:
+
+Projecte manteniment notes assignatura
+
+Desenvolupa un programa que ofereixi a l'usuari la possibilitat de gestionar les notes de tres avaluacions d'un màxim de 50 alumnes a partir d'una sèrie de comandaments.
+
+Atenció, de cada alumne guardarem el seu nom i les seves notes. Ara per ara això ho haurem de fer amb varies llistes per les notes i altre pels noms (en aquest cas una llista de strings)
+Els comandaments són:
+
+•	a «nom» «n1» «n2» «n3»	Insereix les tres notes d'un nou alumne.
+
+Notes:
+
+1.	No et preocupis per repeticions de noms d'alumne.
+
+2.	Pots suposar que els noms dels alumnes mai no superarà els 15 caràcters de longitud.
+
+•	m	Mostra els alumnes i les seves notes aproximadament amb el següent format:
+
+    alumnes           1ra     2na     3ra     final
+    -----------------------------------------------
+    Marta              5       6       7       6.0
+    Joan               4       6      10       6.7
+    
+La nota final és la mitja de les tres notes.
+
+Pistes:
+
+1.	Com que les notes són valors enters i la nota final necessita decimals, segurament et caldrà fer algun cast a l'hora de dividir.
+
+2.	No cal guardis enlloc la nota final. La pots calcular cada cop que et calgui.
+
+•	t	Aprova a tothom.  A tots els alumnes que tinguin una nota final per sota del 5.0, aquesta opció puja a 5 les notes de totes les avaluacions que estiguin per sota de 5.
+
+•	n «nomant» «nomnou» Canvia el nom del primer alumne que es digui nomant. Si no hi ha cap, mostra error. 
+
+•	c «nom» «eval» «n»
+
+Canvia la nota de l'avaluació aval de l'alumne amb nom nom per n.
+
+Com que és possible que hi hagi més d'un alumne amb aquest mateix nom, únicament canviarem la nota del primer.
+
+aval podrà ser 1, 2 o 3. Altre valor serà considerat erroni.
+
+Tant si l'alumne no es troba guardat com si l'avaluació és errònia, es mostrarà un error.
+
+•	?	Mostra una ajuda amb un resum de les comandes disponibles.
+
+•	x	Finalitza l'execució
+
+L'aplicació oferirà el prompt [notes]: i a continuació esperarà l'entrada de l'usuari.
+
+Atenció, cada opció ha de implementar-se amb una subrutina.  No està permès codificar cap funció amb mes de 10 línies (inclòs programa principal).
+
+En aquest cas, el codi s’havia de desenvolupar d’acord a la programació estructural, però introduint mètodes. Per això, amb aquesta pràctica només hi vaig tenir cura d’escriure línies i que finalment funcionés el programa, sense tenir cura –ni coneixement- de la refacció.
+
+Part de codi d’aquest projecte: 
+
+<<Veure imatge adjunta: Exercici-1.png'>>
+
+Tot i l’ordre del codi, no hi va haver cap estratègia a l’hora de desenvolupar un codi que complís els elements:
+-	Fàcil d’entendre.
+
+-	Fàcil de reutilitzar.
+
+-	Fàcil de modificar.
+
+No obstant, actualment tinc la tasca, per una nova nota de la avaluació, refer el codi fent servir POO. Per aquest nou repte, faré ús de la refacció i les proves unitàries, amb l’objectiu d’entregar un projecte amb un codi més net, fàcil de reutilitzar i de modificar. Per a començar, simplificaré els atributs alumnes i avaluacions convertint-los en atributs de la classe “Alumne”, d’aquesta manera només farà falta crear l’objecte alumne on s’obtindrà un String nom, i tres int avaluacions i es guardaran tots en una ArrayList.
+
+Després serà cosa de reutilitzar els mètodes ja creats, però simplificant les crides gràcies al pas del paràmetre ‘Alumne’ i realitzant una única funció per mètode, amb la intenció de crear un codi més net.
+
